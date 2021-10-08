@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSite.Master.cs" Inherits="College_Mangement_System.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="AdminHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+       
+    <form id="form1" runat="server">
+        <br />
+        <asp:Menu ID="Menu" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" ForeColor="#990000" StaticSubMenuIndent="10px" Orientation="Horizontal" RenderingMode="Table">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem Text="Students" Value="Students" NavigateUrl="~/StudentsWebForm.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Subjects" Value="Subjects" NavigateUrl="~/SubjectsWebForm.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Grades" Value="Grades" NavigateUrl="~/MarksWebForm.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/LogoutWebForm.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+        </asp:Menu>
+         
+        <br />
+         
+        <asp:ContentPlaceHolder ID="AdminContentPlaceHolder" runat="server">
+            <p style="height: 706px">
+                <br />
+            </p>
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
